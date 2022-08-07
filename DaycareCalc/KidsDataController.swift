@@ -25,11 +25,12 @@ class KidsDataController {
     }
     
     // Stores website data to core Data
-    func createKid(name: String, picture: UIImage) -> NSManagedObject? {
+    func createKid(name: String, picture: UIImage, date: Date) -> NSManagedObject? {
         let kid = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context)
         kid.setValue(name, forKey: "name")
         let dataPic = picture.pngData()! as NSData
         kid.setValue(dataPic, forKey: "picture")
+        kid.setValue(date, forKey: "date")
         appDelegate.saveContext()
         return kid
     }

@@ -12,6 +12,7 @@ class NewKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var kidPicture: UIImageView!
     @IBOutlet weak var kidName: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     var delegate: UIViewController?
     let picker = UIImagePickerController()
@@ -39,7 +40,7 @@ class NewKidViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func SaveButtonPressed(_ sender: Any) {
-        let newKid = KidsDataController.controller.createKid(name: kidName.text ?? "?", picture: (kidPicture.image ?? UIImage(named: "photo"))!)
+        let newKid = KidsDataController.controller.createKid(name: kidName.text ?? "?", picture: (kidPicture.image ?? UIImage(named: "photo"))!, date: datePicker.date)
         let parentVC = delegate as! ViewController
         parentVC.updateCollectionWithNewKid(kid: newKid!)
     }

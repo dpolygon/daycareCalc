@@ -31,7 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KidsCollectionViewCell.identifier, for: indexPath) as! KidsCollectionViewCell
         let kid = kids![indexPath.item] as! Kids
-        cell.configure(with: UIImage(data: kid.picture!)!, name: kid.name!)
+        cell.configure(with: UIImage(data: kid.picture!)!, name: kid.name!, age: 23)
         return cell
     }
     
