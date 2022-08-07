@@ -16,6 +16,7 @@
 		4D01B169289F3C9C0018672D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D01B167289F3C9C0018672D /* LaunchScreen.storyboard */; };
 		4D01B174289F56A20018672D /* KidsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D01B172289F56A10018672D /* KidsCollectionViewCell.swift */; };
 		4D01B177289F61350018672D /* KidsDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D01B176289F61350018672D /* KidsDataController.swift */; };
+		4D01B179289F6DC10018672D /* NewKidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D01B178289F6DC10018672D /* NewKidViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4D01B16A289F3C9C0018672D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D01B172289F56A10018672D /* KidsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KidsCollectionViewCell.swift; path = ../KidsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D01B176289F61350018672D /* KidsDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsDataController.swift; sourceTree = "<group>"; };
+		4D01B178289F6DC10018672D /* NewKidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKidViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				4D01B16A289F3C9C0018672D /* Info.plist */,
 				4D01B162289F3C990018672D /* DaycareCalc.xcdatamodeld */,
 				4D01B176289F61350018672D /* KidsDataController.swift */,
+				4D01B178289F6DC10018672D /* NewKidViewController.swift */,
 			);
 			path = DaycareCalc;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				4D01B177289F61350018672D /* KidsDataController.swift in Sources */,
 				4D01B164289F3C990018672D /* DaycareCalc.xcdatamodeld in Sources */,
 				4D01B15E289F3C990018672D /* ViewController.swift in Sources */,
+				4D01B179289F6DC10018672D /* NewKidViewController.swift in Sources */,
 				4D01B15A289F3C990018672D /* AppDelegate.swift in Sources */,
 				4D01B15C289F3C990018672D /* SceneDelegate.swift in Sources */,
 				4D01B174289F56A20018672D /* KidsCollectionViewCell.swift in Sources */,

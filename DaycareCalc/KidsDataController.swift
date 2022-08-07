@@ -25,11 +25,11 @@ class KidsDataController {
     }
     
     // Stores website data to core Data
-    func createKid(name: String, dateOfBirth: Date, picture: UIImage) -> NSManagedObject? {
+    func createKid(name: String, picture: UIImage) -> NSManagedObject? {
         let kid = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context)
         kid.setValue(name, forKey: "name")
-        kid.setValue(dateOfBirth, forKey: "date")
-        kid.setValue(picture, forKey: "picture")
+        let dataPic = picture.pngData()! as NSData
+        kid.setValue(dataPic, forKey: "picture")
         appDelegate.saveContext()
         return kid
     }
@@ -79,17 +79,17 @@ class KidsDataController {
 //        appDelegate.saveContext()
 //    }
     
-//    // Remove all websites from Core Data
-//    func deleteAllKeypData() {
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
-//        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: request)
-//        do {
-//            try context.execute(batchDeleteRequest)
-//        } catch {
-//            runErrorMessage(error: error, message: "request to delete all entities pretaining to \(entityName) has failed")
-//        }
-//        appDelegate.saveContext()
-//    }
+    // Remove all websites from Core Data
+    func deleteAllData() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+        do {
+            try context.execute(batchDeleteRequest)
+        } catch {
+            runErrorMessage(error: error, message: "request to delete all entities pretaining to \(entityName) has failed")
+        }
+        appDelegate.saveContext()
+    }
     
     // Any failure to retrieve data from Core Data or
     // failure to save the context will call on this func
